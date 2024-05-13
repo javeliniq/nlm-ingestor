@@ -33,5 +33,5 @@ RUN pip install --upgrade gunicorn
 RUN pip install -r requirements.txt
 RUN python -m nltk.downloader stopwords
 RUN python -m nltk.downloader punkt
-RUN nohup java -jar jars/tika-server-standard-nlm-modified-2.4.1_v6.jar > /dev/null 2>&1 &
-RUN python -m nlm_ingestor.ingestion_daemon
+RUN chmod +x run.sh
+CMD ./run.sh
