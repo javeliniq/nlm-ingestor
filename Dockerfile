@@ -1,5 +1,6 @@
 # syntax=docker/dockerfile:experimental
 FROM python:3.11-bookworm
+EXPOSE 5001
 RUN apt-get update && apt-get -y --no-install-recommends install libgomp1
 ENV APP_HOME /app
 # install Java
